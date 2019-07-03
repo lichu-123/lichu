@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+#注册项目应用
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'booktest',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +73,8 @@ WSGI_APPLICATION = 'demo1.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+#数据库配置
+#Django默认使用sqlite3数据库，sqlite3是一个文件型的数据库，是一个轻量级的数据库。
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
