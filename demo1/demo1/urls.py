@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include,url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # 第一个参数是正则表达式，第二个参数是blog对应的blog项目下的urls（指向了我们创建的blog下的
+    # urls.py文件）
+    url(r'^blog/',include('booktest.urls')),
 ]
