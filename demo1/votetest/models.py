@@ -20,3 +20,4 @@ class HeroInfo(models.Model):
     book=models.ForeignKey(BookInfo,on_delete=models.CASCADE,)
 
 #note：创建完模型类之后，需要把模型类生成迁移文件同步到表里边。
+

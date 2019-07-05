@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<!--加载我们静态文件路径-->
-{% load staticfiles %}
-<html>
+<html lang="en">
 <head>
-    <title>主页</title>
+    <meta charset="UTF-8">
+    <title>首页</title>
+	<link href="/static/css/main.css" rel='stylesheet'>
 </head>
 <body>
-    {{today}}
-    <img src="{% static 'img/1.jpg' %}">
+<div style="margin-top: 20px;margin-right: 100px;margin-left: 100px">
+	<h2>首页</h2>
+	<h3>当前用户：<span class="username">{{ username }}</span></h3>
+	<div align="center">
+		<img src="/static/img/1.jpg" alt="">
+	</div>
+
+	<br>
+	{# <a href='/blog/list/'>{{book}}</a> #}
+	<!--url ‘应用名，url的name’-->
+	<a href="{% url 'booktest:list' %}">跳转列表页</a>
+</div>
+
+
 </body>
 </html>

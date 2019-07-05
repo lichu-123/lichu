@@ -39,12 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'booktest',
 ]
-
+#中间件：提供默认自带功能。
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -107,7 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'zh-Hans' #中文
-
 # TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Shanghai' #上海的时区 （note：改时区很重要）
 USE_I18N = True
@@ -120,12 +119,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-
-#首先static url这个路径让django知道
-#静态资源路径的配置。
 STATIC_PATH = os.path.join(os.path.join(BASE_DIR,'static'))
 STATICFILES_DIRS = (
     STATIC_PATH,
 )
-
 STATIC_URL = '/static/'
