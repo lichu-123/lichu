@@ -11,6 +11,5 @@ urlpatterns=[
     url(r'^detail/(\d+)/$',views.detail,name='detail'),
     url(r'^deletebook/(\d+)/$',views.deletebook,name='deletebook'),
     url(r'^addhero/(\d+)/$',views.addhero,name='addhero'),
-
 ]
 

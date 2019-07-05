@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页问题页</title>
+
+</head>
+<body>
+    <div class="calendar">
+        <h1>问题菜单</h1>
+        {% if questions %}
+        <ul>
+            {% for q in questions %}
+            <li><a href="{% url 'votetest:choice' q.id %}">{{ forloop.counter }}{{ q.info }}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <h2>没有问题</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

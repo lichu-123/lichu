@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'booktest',
+    'votetest'
 ]
 #中间件：提供默认自带功能。
 MIDDLEWARE = [

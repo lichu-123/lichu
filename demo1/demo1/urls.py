@@ -19,5 +19,7 @@ from django.conf.urls import url,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     #让项目路由指向我们配的应用路由
-    url('booktest/',include('booktest.urls',namespace='booktest'))
+    url('booktest/',include('booktest.urls',namespace='booktest')),
+    url('votetest/',include('votetest.urls',namespace='votetest')),
+
 ]

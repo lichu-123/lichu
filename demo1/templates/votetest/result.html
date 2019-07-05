@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结果页</title>
+</head>
+<body>
+    <div class="calendar">
+        <h1>当前问题是：{{ question.info }}</h1>
+        <ul>
+            {% for c in question.optioninfo_set.all %}
+            <li>{{ forloop.counter }}{{ c.name }}票数：{{ c.voteNum }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'votetest:index' %}">返回问题页</a>
+        <a href="{% url 'votetest:choice' question.id %}">返回选择页</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择页</title>
+</head>
+<body>
+    <div class="calendar">
+        <h1>当前问题是：{{ question.info }}</h1>
+        <form action="{% url 'votetest:choice' question.id %}" method="post">
+            {% if question %}
+            <ul>
+                {% for c in question.optioninfo_set.all %}
+                <!--单选框-->
+                {% if forloop.counter == 1 %}
+                <li>{{ forloop.counter }}<input type="radio" checked name="choice" value="{{ c.id }}" href="{% url 'votetest:result' question.id %}">{{ c.name }}</input></li>
+                {% else %}
+                <li>{{ forloop.counter }}<input type="radio" name="choice" value="{{ c.id }}" href="{% url 'votetest:result' question.id %}">{{ c.name }}</input></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% else %}
+            <h2>没有选项</h2>
+            {% endif %}
+            <input type="submit" value="投票">
+            <a href="{% url 'votetest:index' %}">返回问题页</a>
+        </form>
+
+    </div>
+</body>
+</html>
