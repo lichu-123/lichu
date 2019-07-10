@@ -12,14 +12,24 @@
 		<h2>书籍列表</h2>
 		<br>
 		<ul>
-		{% for book in books %}
-		<li>
-			<a href="{% url 'booktest:detail' book.id %}">{{ book.title }}——{{book.pub_date}}</a>
-			<!--重定向-->
-			<a href="{% url 'booktest:deletebook' book.id %}" class="btn btn-danger">删除</a>
-		</li>
-		{% endfor %}
-	</ul>
+			{% for book in books %}
+			<li>
+				<div class="row">
+					<div class="col-md-3">
+						<a href="{% url 'booktest:detail' book.id %}">{{ book.title }}——{{book.pub_date}}</a>
+					</div>
+					<div class="col-md-1">
+						<!--重定向-->
+						<a href="{% url 'booktest:deletebook' book.id %}" class="btn btn-danger">删除</a>
+					</div>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+		<br>
+		<!--添加书籍不用传参数-->
+		<a href="{% url 'booktest:addbook' %}">添加书籍</a>
+		<a href="{% url 'booktest:index' %}">返回列表页</a>
 	</div>
 
 

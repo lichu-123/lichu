@@ -7,7 +7,7 @@ from django.views.generic import View,TemplateView,ListView
 # Create your views here.
 #note：视图函数必须有参数
 def index(request):
-    return render(request,'booktest/index.html',{'username':'lc'})
+    return render(request,'booktest/index.html',{'username':'lc','ads':Ads.objects.all()})
     # return render(request,'blog/index.html',content)
 def list(request):
     books=BookInfo.objects.all()
@@ -41,3 +41,27 @@ def addhero(request,id):
         hero.save()
         # print('我出来了啊')
         return redirect(reverse('booktest:detail',args=(id,)))
+
+def deletehero(request,id):
+    # 因为我们要删除的是book中的某个英雄所以,从我们表的结构来看，删除英雄并不需要知道是那本书。
+    hero=HeroInfo.objects.get(pk=id)
+    bookid=hero.book.id
+    hero.delete()
+    # hero.save() #删除不用.save() 推测，修改和添加需要.save()要调用一个保存函数。 而.delete()的传到数据库已经写在其中了。
+    #重定向的原理，并不是刷新了页面。
+    return redirect(reverse('booktest:detail',args=(bookid,)))
+def addbook(request):
+    if request.method == 'GET':
+        return render(request,'booktest/addbook.html')
+    else:
+        title=request.POST.get('title')
+        book=BookInfo()
+        book.title=title
+        book.save()
+        return redirect(reverse('booktest:list',))
+
+def model_index(request):
+    return render(request,'booktest/model_index.html')
+
+
+

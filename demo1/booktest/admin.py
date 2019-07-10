@@ -21,3 +21,4 @@ class HeroInfoAdmin(admin.ModelAdmin):
 #把我们用model生成的数据库表注册到admin中
 admin.site.register(BookInfo,BookInfoAdmin)
 admin.site.register(HeroInfo,HeroInfoAdmin)
+admin.site.register(Ads)

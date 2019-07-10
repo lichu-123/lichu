@@ -16,7 +16,16 @@
 	<ul>
 		<!--<# 结束for循环语句 #>-->
 		{% for hero in book.heroinfo_set.all %}
-		<li>{{ hero.name }}——{{ hero.content }}</li>
+		<li>
+			<div class="row">
+					<div class="col-md-4">
+						{{ hero.name }}——{{ hero.content }}
+					</div>
+					<div class="col-md-1">
+						<a href="{% url 'booktest:deletehero' hero.id %}" class="btn btn-danger">删除</a>
+					</div>
+			</div>
+		</li>
 		<!--<# 结束for循环语句 #>-->
 		{% endfor %}
 	</ul>

@@ -9,7 +9,9 @@ class BookInfo(models.Model):
     title = models.CharField(max_length=20)
     #默认当成当前创建的时间。(出版时间)
     pub_date = models.DateTimeField(auto_now=True)
-
+    #增强可读性（返回字符串的名字）
+    def __str__(self):
+        return self.title
 #创建一个英雄hero信息（模型类）
 class HeroInfo(models.Model):
     #姓名、性别、内容、书的id（级联删除）
@@ -18,5 +20,13 @@ class HeroInfo(models.Model):
     content = models.CharField(max_length=100)
     #外键，我们在添加数据库的时候写 h1.book=b1(赋值是实例，这样数据表中会自动和另一个表相结合，字段为我们需要找的外键)
     book=models.ForeignKey(BookInfo,on_delete=models.CASCADE,)
+    #增强可读性
+    def __str__(self):
+        return self.name
 
 #note：创建完模型类之后，需要把模型类生成迁移文件同步到表里边。
+class Ads(models.Model):
+    desc=models.CharField(max_length=20)
+    img=models.ImageField(upload_to='ads')
+    def __str__(self):
+        return self.desc

@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>首页问题页</title>
+    <link rel="stylesheet" href="/static/css/main.css">
 
 </head>
 <body>
     <div class="calendar">
+        {% if username %}
+        <h3>当前用户为：{{ username }}</h3> <a href="{% url 'votetest:LoginOut' %}">退出登录</a>
+        <a></a>
+        {% else %}
+        <h3>没有用户</h3>
+        {% endif %}
+
         <h1>问题菜单</h1>
         {% if questions %}
         <ul>

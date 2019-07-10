@@ -21,3 +21,4 @@ class OptionInfoAdmin(admin.ModelAdmin):
 #把我们用model生成的数据库表注册到admin中
 admin.site.register(VoteInfo,VoteInfoAdmin)
 admin.site.register(OptionInfo,OptionInfoAdmin)
+admin.site.register(Ads)

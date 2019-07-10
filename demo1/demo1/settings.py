@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# print(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -24,9 +24,9 @@ SECRET_KEY = '^)tahd$ia7=ui+06yo%oi9bm6w%smg&!1u^5!d6*e5@(b2f$w_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
-
+# DEBUG = False
+# ALLOWED_HOSTS = ['*']
 
 # Application definition
 #注册项目应用
@@ -56,7 +56,8 @@ ROOT_URLCONF = 'demo1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        #note:这个dirs就是templates的绝对路径。
+        'DIRS': [os.path.join(BASE_DIR,'templates')], #note:这个路径文件就是G:\奇酷实训\文件三阶段\lichu\demo1+templates
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,3 +126,5 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'static/media')
