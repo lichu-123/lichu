@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    #这个是启用sessions的时候要用到的
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -128,3 +129,22 @@ STATICFILES_DIRS = (
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/media')
+
+#使用redis存储session 如果不想使用redis存储可以注释掉这些配置。  note：（一些大型的项目一般都是用redis存储的）
+SESSION_ENGINE = 'redis_sessions.session' #指定session的存储方式为redis存储
+SESSION_ENDIS_HOST = 'localhost' #指定要连接的哪个电脑上的redis
+SESSION_REDIS_PORT = 6379 #端口号
+SESSION_REDIS_DB = 0 #指定数据库0
+SESSION_REDIS_PASSWORD = '' #授权密码
+SESSION_REDIS_PREFIX= 'session' #前缀
+#Django使用redis(我们配的另一个是cookie存储使用redis)
+CACHES = {
+    'default' : {
+        'BACKEND':'redis_cache.cache.RedisCache',
+        'LOCATION':'localhost:6379',
+        'TIMEOUT':100, #默认存储时间 以秒为单位
+    }
+}
+
+
+

@@ -28,8 +28,10 @@ PLUGINS = (
     'language',
     'quickfilter',
     'sortablelist',
-    'importexport'
+    'importexport',
+    'ueditor',
 )
+
 
 
 def register_builtin_plugins(site):

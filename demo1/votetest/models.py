@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 # MVT中的M 数据库模型
 # ORM对象
@@ -36,3 +36,10 @@ class Ads(models.Model):
     img=models.ImageField(upload_to='ads')
     def __str__(self):
         return self.desc
+#User类，字段不用我们自己写，用户字段和系统的用户类一对一就行了。
+class MyUser(models.Model):
+    telephone = models.CharField(max_length=11,)
+    default_user = models.OneToOneField(User,on_delete=models.CASCADE)
+#使用系统用户类的另一种写法，直接继承系统的用户类
+class VotetestUser(User):
+    telephone = models.CharField(max_length=11)

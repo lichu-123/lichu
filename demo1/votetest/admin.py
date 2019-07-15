@@ -22,3 +22,4 @@ class OptionInfoAdmin(admin.ModelAdmin):
 admin.site.register(VoteInfo,VoteInfoAdmin)
 admin.site.register(OptionInfo,OptionInfoAdmin)
 admin.site.register(Ads)
+admin.site.register(MyUser)

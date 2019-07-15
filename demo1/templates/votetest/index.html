@@ -8,8 +8,11 @@
 </head>
 <body>
     <div class="calendar">
-        {% if username %}
-        <h3>当前用户为：{{ username }}</h3> <a href="{% url 'votetest:LoginOut' %}">退出登录</a>
+        {% comment %}
+         <!--{% if username %}-->
+        {% endcomment %}
+        {% if user %}
+        <h3>当前用户为：{{ user }}</h3> <a href="{% url 'votetest:LoginOut' %}">退出登录</a>
         <a></a>
         {% else %}
         <h3>没有用户</h3>
@@ -26,5 +29,6 @@
         <h2>没有问题</h2>
         {% endif %}
     </div>
+
 </body>
 </html>

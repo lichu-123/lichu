@@ -11,7 +11,7 @@ urlpatterns=[
     url(r'^detail/(\d+)/$',views.detail,name='detail'),
     url(r'^deletebook/(\d+)/$',views.deletebook,name='deletebook'),
     url(r'^addhero/(\d+)/$',views.addhero,name='addhero'),
-    url(r'^deletehero/(\d+)$',views.deletehero,name='deletehero'),
+    url(r'^deletehero/(\d+)/$',views.deletehero,name='deletehero'),
     url(r'^addbook/$',views.addbook,name='addbook'),
     url(r'^model_index/$',views.model_index,name='model_index'),  #note:这个name是解除硬编码的时候使用。
 ]

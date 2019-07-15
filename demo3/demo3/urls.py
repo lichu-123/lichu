@@ -16,7 +16,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import xadmin
+from django.conf.urls import url,include
+#这个是用来管理上传的文件
+from django.views.static import serve
+from .settings import MEDIA_ROOT
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('xadmin/', xadmin.site.urls),
+    path(r'xadmin/', xadmin.site.urls),
+    url(r'^media/(?P<path>.*)$',serve,{'document_root':MEDIA_ROOT}),
+    url('blog/',include('blog.urls',namespace='blog')),
+    path('ueditor/',include('DjangoUeditor.urls')),
+    # 意思一旦我们搜索search执行的路由会到haystack下的urls里面。所有的搜索结果回到SearchView()里面
+    #这个都对应上了我们在seach下新建的模板，这也是我们要按固定模式建模板的原因。（要和人家配好的模板相对应）
+    url(r'^search/',include('haystack.urls')),
+
 ]
+
+
+
+
+

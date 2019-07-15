@@ -14,10 +14,11 @@ import os
 import sys
 
 sys.path.insert(0,'extra_apps')
+#现在没用到
+# sys.path.insert(1,os.path.join(BASE_DIR,'apps'))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -30,7 +31,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,9 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'xadmin',
     'crispy_forms',
+    'blog',
+    'DjangoUeditor',
+    'haystack',
+
 ]
 
 MIDDLEWARE = [
+    #
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'demo3.simplemiddleware.SimpleMiddleware',
 ]
 
 ROOT_URLCONF = 'demo3.urls'
@@ -59,7 +65,7 @@ ROOT_URLCONF = 'demo3.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -108,10 +114,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-Hans' #中文
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai' #上海的时区 （note：改时区很重要）
 USE_I18N = True
 
 USE_L10N = True
@@ -123,3 +129,36 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+#配置static
+STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
+#配置media的绝对路径
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+MEDIA_URL='/media/'
+MEDIA_DIRS=[os.path.join(BASE_DIR,'media')]
+#在setting中配置whoosh引擎
+HAYSTACK_CONNECTIONS = {
+'default': {
+'ENGINE': 'blog.whoosh_cn_backend.WhooshEngine',
+'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+}
+}
+# 设置对搜索结果的分页，每10项结果为一页。
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
+#索引生成设置
+# 这里设置实时更新索引
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+#配置cache缓存，可以缓存一个视图、一个整数、视图中的某些内容、整个网站。 使用redis数据库默认使用库1
+#Django使用redis(我们配的另一个是cookie存储使用redis)
+CACHES = {
+    'default' : {
+        'BACKEND':'redis_cache.cache.RedisCache',
+        'LOCATION':'localhost:6379',
+        'TIMEOUT':100, #默认存储时间 以秒为单位
+    }
+}
+
+
+
+

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <!--<link rel="stylesheet" href="/static/js/jquery-3.3.1.js">-->
 </head>
 <body>
 <div class="calendar">
@@ -21,6 +23,13 @@
             </div>
         </div>
         <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">验证码：</label>
+            <div class="col-sm-6">
+                <img  onclick="change()" id="verifyimg" src="{% url 'votetest:verify' %}" alt="" height="35">
+                <input type="text" name="verify" class="form-control" id="verify" placeholder="请输入验证码">
+            </div>
+        </div>
+        <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-default">登录</button>
             </div>
@@ -28,5 +37,25 @@
     </form>
     <!--表单结束-->
 </div>
+<script>
+    // console.log('你好你好')
+    $(function () {
+        console.log('=======')
+    })
+
+    //下面我用js原生的代码
+    function change(){
+        var verimg=document.getElementById('verifyimg')
+        verimg.setAttribute('src','/votetest/verify/?t='+new Date().getTime())
+    }
+
+    // $(function () {
+    //     $('#verifyimg').click(function () {
+    //         console.log('你好')
+    //         // $(this).attr('src','/verify/?t='+new Date().getTime())
+    //         // console.log(new Date().getTime())
+    //     })
+    // })
+</script>
 </body>
 </html>
