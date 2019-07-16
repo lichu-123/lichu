@@ -1,0 +1,39 @@
+.contact-left-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    padding-bottom: 1rem;
+  }
+  
+  .contact-left-item i {
+    color: #555555;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    border: 1px solid #ddd;
+    width: 40px;
+    padding: 11px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  
+  .contact-left-list p, .contact-left-list a {
+    color: #2c2e3d;
+    line-height: 1.6;
+    font-size: 1.4rem;
+  }
+  .contact-left-list p {
+    font-size: 2rem;
+  }
+  .store-info {
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  .store-info h1 {
+    padding-bottom: 15px;
+  }
+  .store-info .contact-text {
+    padding-bottom: 15px;
+  }

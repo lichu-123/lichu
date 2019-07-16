@@ -1,0 +1,175 @@
+/*****************************
+01. Default CSS
+*****************************/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.3rem;
+  font-family: 'Quicksand', sans-serif;
+  color: #2c2e3d;
+  line-height: 1.4rem;
+  font-weight: 400;
+  letter-spacing: .05em;
+  overflow-x: hidden;
+}
+
+.table {
+  margin-bottom: 0px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #2c2e3d;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.border-top {
+  border-top: 1px solid #ddd;
+  margin-top: 60px;
+}
+
+.product-tab--2 .border-top {
+  margin-top: 0px;
+}
+
+.heading-primary {
+  font-size: 6rem;
+  line-height: 1;
+  display: block;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.black-bg .heading-primary, .black-bg .sadia-slider-text {
+  color: #fff;
+}
+
+.heading-primary span {
+  color: #fe4536;
+}
+
+.sadia-heading-primary {
+  font-size: 5rem;
+}
+
+.section-title h2 {
+  color: #333;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.section-title h2::before {
+  background: #333 none repeat scroll 0 0;
+  border-radius: 100%;
+  bottom: -1px;
+  content: "";
+  height: 2px;
+  left: 14%;
+  position: absolute;
+  width: 70%;
+}
+
+.section-title h2 i {
+  background: #333 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 11px;
+  height: 20px;
+  left: 50%;
+  line-height: 20px;
+  margin-left: -10px;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 82%;
+  width: 20px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+
+/* bounce-animate */
+
+.bounce-animate {
+  animation-name: shape1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -moz-animation-name: shape1;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: shape1;
+  -ms-animation-duration: 2s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-animation-name: shape1;
+  -o-animation-duration: 2s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+}
+
+@keyframes shape1 {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+@-webkit-keyframes shape1 {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}

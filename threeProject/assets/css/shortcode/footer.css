@@ -1,0 +1,166 @@
+/*****************************
+06. Footer CSS
+*****************************/
+
+.f-logo>p {
+  color: #ddd;
+  font-size: 15px;
+}
+
+.subscribe {
+  position: relative;
+}
+
+.subscribe input {
+  border: 1px solid #ddd;
+  box-shadow: none;
+  color: #333;
+  font-size: 14px;
+  height: 40px;
+  padding-left: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.search-button {
+  background: #fe4536 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: capitalize;
+  transition: all 0.4s ease 0s;
+  width: 60px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #333;
+  color: #fff;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom {
+  padding: 3rem 0;
+}
+
+.f-logo {
+  padding-right: 56px;
+}
+
+.footer p {
+  color: #000;
+  font-size: 1.4rem;
+}
+
+.footer-menu {
+  text-align: center;
+}
+
+.footer a:hover {
+  color: #fe4536;
+}
+
+.widget-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 3rem 0;
+  text-transform: capitalize;
+}
+
+.widget-title {
+  color: #2c2e3d;
+}
+
+.address-widget p {
+  color: #b6becb;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  line-height: 2;
+}
+
+.address-widget p:last-child {
+  margin-bottom: 0px !important;
+}
+
+.address-widget p i.fa {
+  font-size: 1.6rem;
+  margin-right: 10px;
+}
+
+.address-widget p a {
+  color: #b6becb;
+}
+
+.menu-widget ul li {
+  line-height: 1.5;
+}
+
+.menu-widget ul li:not(:last-child) {
+  margin-bottom: 1.4rem;
+}
+
+.menu-widget .list-unstyled li:not(:last-child) {
+  margin-bottom: 0px;
+}
+
+.menu-widget ul li a {
+  font-size: 1.4rem;
+  color: #b6becb;
+  display: inline-block;
+  font-weight: 400;
+}
+
+.menu-widget ul li a {
+  color: #2c2e3d;
+}
+
+.payment {
+  margin-top: 2px;
+  text-align: right;
+}
+
+.copyright-text {
+  margin-bottom: 0;
+  color: #333;
+}
+
+.copyright-text a {
+  color: #fe4536;
+}
+
+.copyright-text a {
+  color: #fe4536;
+}
+
+.copyright-text a:hover {
+  color: #fe4536;
+  text-decoration: underline;
+}
+
+.payment ul>li {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.payment>ul>li>a {
+  color: #333;
+  font-size: 25px;
+}
+
+.footer-widget-row .footer-widget {
+  margin-bottom: 4rem;
+}
+.social-item a {
+  line-height: 14px;
+}

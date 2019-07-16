@@ -1,0 +1,175 @@
+/*****************************
+Single Product CSS
+*****************************/
+
+.single-product-img {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.single-product-img img {
+  width: 100%;
+}
+
+.popup-img-sproduct {
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.popup-img-sproduct i {
+  color: #fe4536;
+  font-size: 2.5rem;
+  width: 40px;
+  line-height: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.single-product .product-thumbnail {
+  padding: 0 3rem;
+}
+
+.single-product-name {
+  color: #2c2e3d;
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.single-product-referance {
+  color: #606060;
+  margin-bottom: 1.5rem;
+}
+
+.single-product-review-btn {
+  color: #606060;
+  display: inline-block;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.single-product-review-btn i {
+  margin-right: .6rem;
+}
+
+.single-product-short-desc {
+  color: #2c2e3d;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+.single-product .sadia-product-label {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.single-product .social-share {
+  padding-left: 0;
+}
+
+.single-product .social-share span {
+  font-size: 1.6rem;
+  color: #555555;
+}
+
+.single-product .sadia-social-link i {
+  color: #333;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.single-product .block-reassurance-item {
+  padding: 1.5rem 0;
+}
+
+.single-product .block-reassurance-item:last-child {
+  padding-bottom: 0;
+}
+
+.single-product .block-reassurance-item span {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #2c2e3d;
+}
+
+.single-product .block-reassurance-item img {
+  margin-right: .8rem;
+}
+
+.product-description {
+  color: #606060;
+  line-height: 1.6;
+  margin-bottom: 0px;
+}
+
+.new-products-area .product-tab {
+  margin-top: 50px;
+}
+
+.user-information {
+  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ededed;
+}
+
+.user-information [class*="col-"]:not(:last-child) .user-information__single {
+  border-right: 1px solid #ededed;
+}
+
+.user-information__single {
+  height: 100%;
+  padding: 3.5rem 2rem;
+  min-height: 11.8rem;
+}
+
+.user-information p {
+  color: #2c2e3d;
+  font-size: 1.4rem;
+}
+
+.user-information p a {
+  color: #fe4536;
+}
+
+.single-product-content {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.review-area h4 span {
+  font-size: 12px;
+  padding-left: 15px;
+}
+
+.single-product-content .product-title {
+  font-weight: normal;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+.single-product-content .product-price {
+  font-size: 18px;
+  margin-bottom: 2.5rem;
+}
+.single-product-content p b {
+  width: 120px;
+  display: inline-block;
+}
+.product-action-wrapper .btn-style-4 {
+  margin-top: 22px;
+}

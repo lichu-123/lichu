@@ -1,0 +1,203 @@
+/***********************
+Main Navigation
+************************/
+
+.main-navigation {
+  display: block;
+}
+
+.main-navigation {
+  background-color: transparent;
+  height: 100%;
+  text-align: left;
+}
+
+.sticky-header .main-navigation, .sticky-header .sadia-main-menu {
+  background: transparent;
+}
+
+.mainmenu {
+  text-align: center;
+}
+
+.sadia-mainmenu-itm {
+  display: inline-block;
+  margin: 0 .5rem;
+  position: relative;
+}
+
+.sadia-mainmenu-itm:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+.sadia-mainmenu-itm.active>a {
+  color: #fe4536;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children li a {
+  font-weight: 400;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul {
+  position: absolute;
+  transform: scale(0.9);
+  left: 0;
+  top: 5.8rem;
+  background-color: #fff;
+  z-index: 9;
+  text-align: left;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul.megamenu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-flex-wrap: none;
+  -webkit-flex-wrap: nowrap;
+  -mox-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 40rem;
+  left: 50%;
+  margin-left: -24rem;
+  padding: 2rem;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul.megamenu>li {
+  -webkit-flex: 0 0 25%;
+  -moz-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul.megamenu li {
+  padding-right: 2rem;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul.megamenu li ul {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  top: auto !important;
+  left: auto;
+  background: transparent;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  display: block;
+  padding: 0 !important;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul.megamenu>li>a {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul.megamenu>li>a:hover {
+  color: #2c2e3d;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul.megamenu.three-column {
+  width: 85rem;
+  left: 0%;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul.megamenu.three-column>li {
+  max-width: 100%;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul ul {
+  left: 100%;
+  top: 15rem !important;
+}
+
+.sadia-mainmenu-itm.menu-item-has-children ul li:hover ul {
+  top: 0 !important;
+  pointer-events: visible;
+}
+
+.mainmenu li:hover>ul {
+  top: 100%;
+  z-index: 999999;
+  pointer-events: visible;
+}
+
+.mainmenu li a {
+  display: block;
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c2e3d;
+  text-transform: uppercase;
+}
+
+.mainmenu li a:hover {
+  color: #fe4536;
+}
+
+.mainmenu .sub-menu {
+  pointer-events: none;
+  width: 24rem;
+  padding: 1.5rem 0;
+  white-space: -moz-nowrap;
+  white-space: nowrap;
+}
+
+.mainmenu .sub-menu li {
+  position: relative;
+}
+
+.mainmenu .sub-menu a {
+  color: #2c2e3d;
+  font-size: 1.5rem;
+  padding: 1rem 3.5rem 1rem 2.5rem;
+  display: block;
+  text-transform: capitalize;
+}
+
+.mainmenu .sub-menu a:hover {
+  color: #fe4536;
+}
+
+.sadia-main-menu {
+  text-align: center;
+}
+
+.sadia-main-menu .sadia-mainmenu-itm {
+  margin: 0;
+}
+
+.sadia-main-menu .sadia-mainmenu-link {
+  color: #000;
+  padding: 30px 10px;
+}
+
+.header-footer .sadia-main-menu .sadia-mainmenu-link {
+  padding: 20px 10px;
+}
+
+.sadia-main-menu li.menu-item-has-children ul {
+  background-color: #fff;
+  transform: scale(1)
+}
+
+.sadia-main-menu li.menu-item-has-children ul li a {
+  color: #000;
+  text-transform: capitalize;
+}
+
+.sadia-main-menu li.menu-item-has-children ul.megamenu>li>a:hover {
+  color: #333;
+}

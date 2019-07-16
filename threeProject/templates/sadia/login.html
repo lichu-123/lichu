@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="this is a demo meta description">
+    <meta name="keywords" content="this is a demo meta keywords">
+    <title>Sadia - Multipurpose eCommerce Bootstrap 4 Template</title>
+
+    <!-- Favicons -->
+    
+    <link rel="apple-touch-icon" href="/assets/img/icon.png">
+
+
+
+    <!-- ************************* CSS ************************* -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+
+    <!-- All Plugins CSS css -->
+    <link rel="stylesheet" href="/assets/css/plugins.css">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!-- responsive css -->
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <!-- modernizr JS
+    ============================================ -->
+    <script src="/assets/js/modernizr-2.8.3.min.js"></script>
+
+</head>
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+
+    <!-- Main Wrapper Start -->
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fa fa-close"></i>
+            </div>
+            <h3>Cart</h3>
+
+            <div class="list-unstyled components">
+                <div class="header-user-item">
+                    <div class="hcart-action">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <div class="hcart-image">
+                        <img src="/assets/img/sidenav/1.jpg" alt="product">
+                    </div>
+                    <div class="hcart-content">
+                        <h4><a href="single-product.html">Red bag</a></h4>
+                        <p>1 X &dollar;100</p>
+                    </div>
+                </div>
+                <div class="header-user-item">
+                    <div class="hcart-action">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <div class="hcart-image">
+                        <img src="/assets/img/sidenav/2.jpg" alt="product">
+                    </div>
+                    <div class="hcart-content">
+                        <h4><a href="single-product.html">Blue shoes</a> </h4>
+                        <p>1 X &dollar;100</p>
+                    </div>
+                </div>
+                <div class="header-user-item">
+                    <div class="hcart-action">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <div class="hcart-image">
+                        <img src="/assets/img/sidenav/3.jpg" alt="product">
+                    </div>
+                    <div class="hcart-content">
+                        <h4><a href="single-product.html">Blue man shirt</a> </h4>
+                        <p>1 X &dollar;100</p>
+                    </div>
+                </div>
+                <ul class="header-user-list">
+                    <li class="header-user-single">
+                        <span class="header-user-single--title">Subtotal</span>
+                        <span class="cart-amount">$100.00</span>
+                    </li>
+                </ul>
+                <div class="header-user-btn">
+                    <a href="cart.html" class="btn btn-checkout btn-style-3">Cart</a>
+                    <a href="checkout.html" class="btn btn-checkout btn-style-3">Checkout</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Sidebar End -->
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <!-- Header area Start -->
+            <header class="header">
+                <div class="header-top d-none d-md-block">
+                    <div class="container">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 col-sm-12">
+                                <p><i class="fa fa-headphones"></i> 123456789 / 653134567</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <!-- Header Top Nav Start -->
+                                <div class="language-currancy d-flex justify-content-md-end justify-content-center">
+                                    <div class="top-hdrop">
+                                        <div class="dropdown sadia-top-dropdown">
+                                            <a class="dropdown-toggle" id="sadia-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Account<i class="fa fa-angle-down"></i></a>
+                                            <div class="dropdown-menu" aria-labelledby="sadia-user">
+                                                <a class="dropdown-item" href="checkout.html">Checkout</a>
+                                                <a class="dropdown-item" href="wishlist.html">Wishlist</a>
+                                                <a class="dropdown-item" href="{% url 'sadia:register' %}">注册</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-hdrop">
+                                        <div class="dropdown sadia-top-dropdown">
+                                            <select class="country_select">
+                                                <option value="">Language</option>
+                                                <option value="English">English</option>
+                                                <option value="French">French</option>
+                                                <option value="German">German</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="top-hdrop">
+                                        <div class="dropdown sadia-top-dropdown">
+                                            <select class="country_select">
+                                                <option value="">Currency</option>
+                                                <option value="Dollar">&dollar; - Dollar</option>
+                                                <option value="Pound">&pound; - Pound</option>
+                                                <option value="Euro">&euro; - Euro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Header Top Nav End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-middle">
+                    <div class="container">
+                        <div class="row no-gutters">
+                            <div class="col-lg-2 col-md-3 col-sm-6 col-6 text-left">
+                                <a class="logo-box" href="index.html">
+                                    <img src="/assets/img/logo.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="col-lg-7 col-md-6 col-6 d-none d-md-block">
+                                <div class="header-middle-right justify-content-md-end">
+                                    <nav class="main-navigation">
+                                        <!-- Mainmenu Start -->
+                                        <ul class="mainmenu sadia-main-menu">
+                                            <li class="sadia-mainmenu-itm menu-item-has-children">
+                                                <a href="index.html" class="sadia-mainmenu-link">Home</a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="index.html" class="mainmenu-sub-link">Home version 1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="index-2.html" class="mainmenu-sub-link">Home version 2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="index-3.html" class="mainmenu-sub-link">Home version 3</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="sadia-mainmenu-itm menu-item-has-children">
+                                                <a href="shop.html" class="sadia-mainmenu-link">Categories</a>
+                                                <ul class="megamenu three-column">
+                                                    <li>
+                                                        <a href="#">Fashion</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="shop.html" class="">Cloth</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Shoes</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Sunglass</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Bag</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Beauty</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="shop.html" class="">Lipistic</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Nailpalish</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Eyeliner</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Shampoo</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Jewellery</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="shop.html" class="">Necklace</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Earring</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Nose Pin</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop.html" class="">Bracelet</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="d-none d-lg-block">
+                                                        <img class="megamenu-img" src="/assets/img/category.jpg" alt="">
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                            <li class="sadia-mainmenu-itm menu-item-has-children">
+                                                <a href="shop.html" class="sadia-mainmenu-link">Shop</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item-has-children">
+                                                        <a href="shop.html">Shop Grid</a>
+                                                        <ul class="sub-menu">
+                                                            <li>
+                                                                <a href="shop.html">Shop Grid Left Sidebar</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop-right-sidebar.html">Shop Grid Right Sidebar</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item-has-children">
+                                                        <a href="shop-list-view.html">Shop List</a>
+                                                        <ul class="sub-menu">
+                                                            <li>
+                                                                <a href="shop-list-view.html">Shop List Left Sidebar</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop-no-sidebar.html" class="mainmenu-sub-link">Shop Without Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="single-product.html" class="mainmenu-sub-link">Single Products</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="sadia-mainmenu-itm menu-item-has-children">
+                                                <a href="#" class="sadia-mainmenu-link">Pages</a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="cart.html" class="mainmenu-sub-link">Cart</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="wishlist.html" class="mainmenu-sub-link">Wishlist</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="checkout.html" class="mainmenu-sub-link">Checkout</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="login.html" class="mainmenu-sub-link">Login</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{% url 'sadia:register' %}" class="mainmenu-sub-link">注册</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="about.html" class="mainmenu-sub-link">About Us</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="contact-us.html" class="mainmenu-sub-link">Contact Us</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="404.html" class="mainmenu-sub-link">404 Page</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="sadia-mainmenu-itm menu-item-has-children">
+                                                <a href="blog.html" class="sadia-mainmenu-link">Blog</a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="blog-left-sidebar.html">Blog With Left Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-right-sidebar.html">Blog With right Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog.html">Blog Without Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="single-blog-left-sidebar.html">Blog Details Left Sidebar</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="single-blog-right-sidebar.html">Blog Details Right Sidebar</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                             <li class="sadia-mainmenu-itm">
+                                                <a href="about.html" class="sadia-mainmenu-link">About Us</a>
+                                            </li>
+                                        </ul>
+                                        <!-- Mainmenu End -->
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                                <div class="header-middle-right justify-content-md-end">
+                                    <!-- Header search Start -->
+                                    <div class="header-user header-area-user">
+                                        <a class="sadia-user-toggle" data-vw-action="open-search-popup">
+                                            <i class="fa fa-search header-heart-icon"></i>
+                                        </a>
+                                    </div>
+                                    <div class="vw-search-popup">
+                                        <div class="vw-search-popup-wrapper">
+                                            <div class="inner">
+                                                <form class="clearfix">
+                                                    <input type="search" name="search" class="search-field" placeholder="Type Something...">
+                                                    <button type="submit" class="search-submit">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="vw-search-popup-close" data-vw-action="close-search-popup">
+                                            <span></span>
+                                            <span></span>
+                                        </a>
+                                    </div>
+                                    <!-- Header search End -->
+
+                                    <a id="sidebarCollapse">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <sup class="cart-badge">03</sup>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mobile-menu mobile__menu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Header area End -->
+
+            <!-- Breadcumb area Start -->
+            <div class="breadcumb-area grey-color">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="breadcumb">
+                                <li class="sadia-breadcumb"><a class="sadia-breadcumb-link" href="index.html">主页</a></li>
+                                <li class="sadia-breadcumb"><a class="sadia-breadcumb-link current" href="login.html">登录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcumb area End -->
+
+            <!-- Main content wrapper start -->
+            <div class="main-content-wrapper">
+                <div class="page-inner ptb--80">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-10">
+                                <div class="form-box">
+                                    <h1>登录</h1>
+                                    <p>请使用以下信息登录.</p>
+                                    <form class="form" action="{% url 'sadia:Login' %}" method="post">
+                                        {% csrf_token %}
+                                        <div class="sadia-form-group row">
+                                            <div class="col-md-12 col-lg-12 col-12">
+                                                <input type="text" name="login_username" id="login_username" class="sadia-input-form" placeholder="用户名">
+                                            </div>
+                                        </div>
+                                        <div class="sadia-form-group row">
+                                            <div class="col-md-12 col-lg-12 col-12">
+                                                <input type="password" name="login_password" id="login_password" class="sadia-input-form" placeholder="密码">
+                                                <button class="password-btn" type="button">show</button>
+                                            </div>
+                                        </div>
+                                        <div class="sadia-form-group row">
+                                            <div class="col-lg-12 col-12">
+                                                <a href="#" class="forgot-pass">忘记密码?</a>
+                                                <button type="submit" class="btn btn--large btn-style-3">登录</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <a class="create-account-link" href="{% url 'sadia:register' %}">还没有用户? 立即注册</a>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>   
+                </div>
+            </div>
+            <!-- Main content wrapper end -->
+
+            <!-- Footer top area Start -->
+            <div class="footer grey-color">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row pt--80 pb--40 footer-widget-row">
+
+                            <!-- Footer Widget Start -->
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="footer-widget">
+                                    <h3 class="widget-title">About Us</h3>
+                                    <div class="f-logo menu-widget">
+                                        <div class="mb--20">
+                                            <a href="index-2.html"><img src="/assets/img/logo.png" alt=""></a>
+                                        </div>
+                                        <p>If you want to Get all the latest information on Events, Sales and Offers. Sign up for newsletter today. Be the first to know</p>
+
+                                        <ul class="list-unstyled CTAs mt--20">
+                                            <li class="social-item"><a href="#" class="sadia-social-link"><i class="fa fa-facebook"></i></a></li>
+                                            <li class="social-item"><a href="#" class="sadia-social-link"><i class="fa fa-twitter"></i></a></li>
+                                            <li class="social-item"><a href="#" class="sadia-social-link"><i class="fa fa-youtube"></i></a></li>
+                                            <li class="social-item"><a href="#" class="sadia-social-link"><i class="fa fa-google-plus"></i></a></li>
+                                            <li class="social-item"><a href="#" class="sadia-social-link"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Footer Widget End -->
+
+                            <!-- Footer Widget Start -->
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="footer-widget">
+                                    <h3 class="widget-title">Contact Us</h3>
+                                    <div class="menu-widget">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-map-marker"></i> #183 Scelerisque Road 10. Luxemburg. Alice</a></li>
+                                            <li><a href="#"><i class="fa fa-phone"></i> +001 2233 456 / +001 2233 929</a></li>
+                                            <li><a href="#"><i class="fa fa-envelope"></i> demo@yahoo.com / demo2@yahoo.com</a> </li>
+                                            <li><a href="#"><i class="fa fa-skype"></i> sadia-skype</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Footer Widget End -->
+
+                            <!-- Footer Widget Start -->
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="footer-widget">
+                                    <h3 class="widget-title">Subscribe</h3>
+                                    <div class="f-logo">
+                                        <p>Join our community and be the first to know about offers, new collections and interior trends.</p>
+                                        <div class="subscribe mt--20">
+                                            <form action="#">
+                                                <input placeholder="Enter Your Mail" type="email">
+                                                <button value="Submit" type="submit" class="search-button">Go</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Footer Widget End -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer top area End -->
+
+            <!-- footer start -->
+            <footer class="grey-color">
+                <div class="container">
+                    <div class="footer-bottom">
+                        <div class="row">
+                                    
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <!-- Copyright Text Start -->
+                                <p class="copyright-text">
+                                    © <a href="http://www.17sucai.com">themeglass</a>. All rights reserved
+                                </p>
+                                <!-- Copyright Text End -->
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="payment">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer end -->
+        </div>
+
+    </div>
+
+    <!-- Main Wrapper End -->
+
+
+
+    <!-- Scroll To Top -->
+    <a class="scroll-to-top bounce-animate" href="#"><i class="fa fa-angle-double-up"></i></a>
+
+    <div class="overlay menu-overlay"></div>
+
+
+    <!-- ************************* JS ************************* -->
+
+    <!-- jQuery JS -->
+    <script src="/assets/js/vendor/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="/assets/js/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins JS -->
+    <script src="/assets/js/plugins.js"></script>
+
+    <!-- Main JS -->
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

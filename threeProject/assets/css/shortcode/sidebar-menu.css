@@ -1,0 +1,158 @@
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    width: 370px;
+    position: fixed;
+    top: 0;
+    left: -370px;
+    height: 100vh;
+    z-index: 999999999;
+    background: #fff;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+}
+
+#sidebar .hcart-content h4 a {
+    color: #333;
+}
+
+#sidebar .hcart-action {
+    color: #333;
+}
+
+#sidebar .header-user-single--title {
+    color: #333;
+}
+
+#sidebar .cart-amount {
+    color: #333;
+}
+
+#sidebar h3 {
+    color: #333;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+
+#sidebarCollapse {
+    float: right;
+    font-size: 2rem;
+    margin: 27px 0px 27px 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar .btn-style-3 {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px 0px;
+}
+
+#dismiss {
+    text-align: center;
+    color: #333;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 25px;
+}
+
+#dismiss:hover {
+    color: #ccc;
+}
+
+.overlay.menu-overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay.menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar .components {
+    padding: 0px 20px 20px 20px;
+}
+
+#sidebar p {
+    color: #333;
+    font-size: 15px;
+}
+
+#sidebar ul li a {
+    padding: 8px 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #333;
+}
+
+#sidebar ul li a:hover {
+    color: #ccc;
+}
+
+#sidebar ul li.active>a, a[aria-expanded="true"] {
+    color: #ccc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 8px 7px 8px 7px !important;
+    border: 1px solid #333;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sticky-header #sidebarCollapse {
+    color: #000;
+}

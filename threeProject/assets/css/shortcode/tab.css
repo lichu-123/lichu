@@ -1,0 +1,138 @@
+.ktab.nav-link {
+  position: relative;
+  display: block;
+  padding: 2rem 4rem;
+  cursor: pointer;
+  color: #2c2e3d;
+  background: #f6f6f6;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 0;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.ktab.nav-link.active {
+  color: #fff;
+  background-color: #fff;
+  border-right-color: #f6f6f6;
+  border-radius: 0;
+}
+
+.ktab.nav-link:hover {
+  color: #000;
+}
+
+.product-tab--2 .ktab.nav-link {
+  background: transparent;
+  border: none;
+  border: 1px solid #ddd;
+}
+
+.new-products-area .sadia-ptab-content {
+  background: #fff;
+  padding: 15px;
+}
+
+.sadia-tab-carousel {
+  position: relative;
+  padding-top: 15px;
+}
+
+.new-products-area .sadia-tab-carousel {
+  padding-bottom: 15px;
+}
+
+.sadia-tab-carousel .owl-prev {
+  margin: 0 5px 0 25px;
+  width: 3rem;
+  height: 3rem;
+  line-height: 2.8rem;
+}
+
+.sadia-tab-carousel .owl-next {
+  width: 3rem;
+  height: 3rem;
+  line-height: 2.8rem;
+}
+
+.product-tab--2 .product-pills .ktab:before {
+  display: none;
+}
+
+.product-tab--2 .product-pills .ktab.active {
+  color: #fff;
+  font-weight: bold;
+  background: #fe4536;
+}
+
+.tab-pane .product-box {
+  -webkit-transition: all 0.8s ease-in;
+  -moz-transition: all 0.8s ease-in;
+  -ms-transition: all 0.8s ease-in;
+  -o-transition: all 0.8s ease-in;
+  transition: all 0.8s ease-in;
+  background: transparent;
+}
+
+.main-shop-wrapper .tab-pane .product-box {
+  margin-bottom: 30px;
+}
+
+.tab-pane.active .product-box {
+  animation: zoomIn .5s linear .1s;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #000;
+}
+
+/****************************
+  Single Product Info tab
+  ****************************/
+
+.single-product-pills {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.single-product-pills .nav-link {
+  padding: 2rem;
+  text-transform: capitalize;
+  color: #2c2e3d;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.product-tab--2 .product-pills {
+  justify-content: flex-end;
+}
+
+.single-product-pills .nav-link.active {
+  color: #fe4536;
+  background: #fff;
+}
+
+.single-product-pills .nav-link:hover {
+  color: #fe4536;
+}
+
+.single-sadia-ptab-content {
+  padding: 3rem;
+  border-top: 1px solid #ddd;
+  border-top: none;
+  background: #fff;
+}
+
+.ratings a {
+  color: #fe4536;
+}
+
+.review-area h2 {
+  margin-bottom: 20px;
+}

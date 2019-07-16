@@ -1,0 +1,166 @@
+.btn {
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1.7rem 2rem;
+  background: #fe4536;
+  border: none;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:not([href]) {
+  border: none;
+  cursor: pointer;
+}
+
+.btn--small {
+  padding: 1.3rem 2rem;
+  font-size: 1.4rem;
+}
+
+.btn--fullwidth {
+  width: 100%;
+}
+
+.btn-checkout {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+}
+
+.btn-style-2 {
+  color: #fff !important;
+}
+
+.btn-style-2:hover {
+  background: #2c2e3d;
+}
+
+.btn-style-3 {
+  background: #2c2e3d;
+}
+
+.btn-style-3:hover {
+  background: #000;
+  color: #fff !important;
+}
+
+.btn-style-4 {
+  background: transparent;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 1.5rem 2rem;
+}
+.btn-style-4:hover {
+  background: #000;
+  color: #fff !important;
+}
+
+.slider-btn {
+  background: #fe4536;
+}
+
+.slider-btn:hover {
+  background: #2c2e3d;
+  color: #fff !important;
+}
+
+.add-to-cart {
+  color: #000;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+.form-btn {
+  background: #fe4536;
+  -webkit-flex: 0 0 7rem;
+  -moz-flex: 0 0 7rem;
+  -ms-flex: 0 0 7rem;
+  flex: 0 0 7rem;
+  border: none;
+  border-radius: 0px 3px 3px 0px;
+  cursor: pointer;
+  color: #2c2e3d;
+}
+
+.newsletter-btn {
+  padding: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.sadia-form-group span {
+  padding-right: 18px;
+}
+
+.form-btn i.fa {
+  font-size: 2rem;
+}
+
+.form-btn:hover {
+  background: #fe4536;
+}
+
+.form-btn:focus {
+  color: #fff;
+}
+
+.sadia-form-btn {
+  background-color: transparent;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+}
+
+.sadia-form-btn i.fa {
+  color: #fe4536;
+}
+
+.sadia-form-btn:hover {
+  background-color: transparent;
+}
+
+.review-btn:not([href]):not([tabindex]) {
+  background: #333333;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: .8rem 2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.review-btn:not([href]):not([tabindex]):hover {
+  background-color: #fe4536;
+  color: #fff;
+}
+
+.review-btn:not([href]):not([tabindex]):active {
+  background-color: #f5f5f5;
+}
+
+.review-form__btn {
+  border: none;
+  color: #fff;
+  background-color: #333333;
+  padding: 1.2rem 2.2rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  border-radius: 0;
+}
+
+.review-form__btn:hover {
+  background-color: #fe4536;
+  color: #fff;
+}
+
+.review-form__btn:active {
+  background-color: #f5f5f5;
+  color: #2c2e3d;
+}
+
+.btn--large {
+  width: 100%;
+}
