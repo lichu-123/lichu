@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+{% load my_func %}
 <html lang="zxx">
 <head>
     <meta charset="UTF-8">
@@ -335,7 +336,7 @@
                             <div class="col-lg-3 col-md-3 col-sm-6 col-6">
                                 <div class="header-middle-right justify-content-md-end">
                                     <!-- Header search Start -->
-                                    <div class="header-user header-area-user">
+                            F        <div class="header-user header-area-user">
                                         <a class="sadia-user-toggle" data-vw-action="open-search-popup">
                                             <i class="fa fa-search header-heart-icon"></i>
                                         </a>
@@ -343,8 +344,8 @@
                                     <div class="vw-search-popup">
                                         <div class="vw-search-popup-wrapper">
                                             <div class="inner">
-                                                <form class="clearfix">
-                                                    <input type="search" name="search" class="search-field" placeholder="Type Something...">
+                                                <form class="clearfix" method="get" action="/search/">
+                                                    <input type="search" name="q" class="search-field" placeholder="Type Something...">
                                                     <button type="submit" class="search-submit">
                                                         <i class="fa fa-search"></i>
                                                     </button>
@@ -403,14 +404,22 @@
                                         <!-- Category Search filter Start -->
                                         <div class="filter-box mb--30">
                                             <div class="filter-title">
-                                                <h2>Filter by categories</h2>
+                                                <h2>按照类别分类</h2>
                                             </div>
                                             <ul class="search-filter-list">
+                                                {% getCategorie as getCate %}
+                                                {% for i in getCate %}
                                                 <li class="custom-checkbox">
+                                                    {% comment %}
                                                     <input type="checkbox" name="bookandboardgame" id="cat" class="sadia-checkbox">
                                                     <label for="cat" class="sadia-checkbox-label">Dresses</label>
+                                                    {% endcomment %}
+                                                    <a href="{% url 'sadia:searchCategorie' i.id %}" class="sadia-checkbox-label">{{ i.title }}</a>
                                                 </li>
-                                                <li class="custom-checkbox">
+                                                {% endfor %}
+
+                                                {% comment %}
+                                                 <li class="custom-checkbox">
                                                     <input type="checkbox" name="babydols" id="1" class="sadia-checkbox">
                                                     <label for="1" class="sadia-checkbox-label">Accessories</label>
                                                 </li>
@@ -426,6 +435,8 @@
                                                     <input type="checkbox" name="babydols" id="4" class="sadia-checkbox">
                                                     <label for="4" class="sadia-checkbox-label">Jewelery</label>
                                                 </li>
+                                                {% endcomment %}
+
                                             </ul>
                                         </div>
                                         <!-- Category Search filter End -->
@@ -433,13 +444,22 @@
                                         <!-- Brand Search filter Start -->
                                         <div class="filter-box mb--30">
                                             <div class="filter-title">
-                                                <h2>Filter by brand</h2>
+                                                <h2>按照品牌分类</h2>
                                             </div>
                                             <ul class="search-filter-list">
+                                                {% getBrand as getBrandAll %}
+                                                {% for i in getBrandAll %}
+                                                {% comment %}
+                                                 <input type="checkbox" name="bookandboardgame" id="bookandboardgame" class="sadia-checkbox">
+                                                 <label for="bookandboardgame" class="sadia-checkbox-label">{{ i.title }}</label>
+                                                {% endcomment %}
                                                 <li class="custom-checkbox">
-                                                    <input type="checkbox" name="bookandboardgame" id="bookandboardgame" class="sadia-checkbox">
-                                                    <label for="bookandboardgame" class="sadia-checkbox-label">Nike</label>
+                                                     <a href="{% url 'sadia:searchBrand' i.id %}" class="sadia-checkbox-label">{{ i.title }}</a>
+
                                                 </li>
+                                                {% endfor %}
+
+                                                {% comment %}
                                                 <li class="custom-checkbox">
                                                     <input type="checkbox" name="babydols" id="5" class="sadia-checkbox">
                                                     <label for="5" class="sadia-checkbox-label">sadia</label>
@@ -456,6 +476,8 @@
                                                     <input type="checkbox" name="babydols" id="8" class="sadia-checkbox">
                                                     <label for="8" class="sadia-checkbox-label">Dolet</label>
                                                 </li>
+                                                {% endcomment %}
+
                                             </ul>
                                         </div>
                                         <!-- Category Search filter End -->
@@ -485,16 +507,23 @@
                                         <!-- Size Search filter Start -->
                                         <div class="filter-box mb--30">
                                             <div class="filter-title">
-                                                <h2>Tags</h2>
+                                                <h2>标签</h2>
                                             </div>
                                             <ul class="tag-list">
-                                                <li><a href="#">Man</a></li>
+                                                {% getTag as Tag %}
+                                                {% for i in Tag %}
+                                                <li><a href="{% url 'sadia:searchTag' i.id %}">{{ i.title }}</a></li>
+                                                {% endfor %}
+
+                                                {% comment %}
                                                 <li><a href="#">Women</a></li>
                                                 <li><a href="#">Accessories</a></li>
                                                 <li><a href="#">Shoes</a></li>
                                                 <li><a href="#">Children</a></li>
                                                 <li><a href="#">Toys</a></li>
                                                 <li><a href="#">Games</a></li>
+                                                {% endcomment %}
+
                                             </ul>
                                         </div>
                                         <!-- Size Search filter End -->
@@ -577,7 +606,7 @@
                                             <div class="product-grid-view">
                                                 <!--完美就是这个，这个div里面写的就是我们需要遍历的商品模型-->
                                                 <div class="row">
-                                                    {% for i in goods_list %}
+                                                    {% for i in page.object_list %}
                                                     <div class="col-xl-4 col-md-6">
                                                         <!-- Product Box Start -->
                                                         <div class="product-grid mb--30">
@@ -1029,10 +1058,26 @@
                                     <div class="row mb-md--30">
                                         <div class="col-12 text-center">
                                             <ul class="pagination">
-                                                <li><a href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+
+                                                {% if page.has_previous %}
+                                                 <li><a href="?page={{ page.next_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+                                                {% endif %}
+
+                                                {% for i in page.paginator.page_range %}
+                                                {% if i == page.number %}
+                                                <li class="current col-md-1"><a href="?page={{i}}">{{ i }}</a></li>
+                                                {% else %}
+                                                <li class="col-md-1"><a href="?page={{i}}">{{ i }}</a></li>
+                                                {% endif %}
+                                                {% endfor %}
+                                                {% comment %}
+                                                 <li><a href="#">2</a></li>
+                                                 <li><a href="#">3</a></li>
+                                                {% endcomment %}
+                                                {% if page.has_next %}
+                                                <li><a href="?page={{ page.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+                                                {% endif %}
+
                                             </ul>
                                         </div>
                                     </div>   

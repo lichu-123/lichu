@@ -6,6 +6,7 @@ class SimpleMiddleware(MiddlewareMixin):
         print('处理了请求')
         print(request.headers)
         print(request.headers.get('User-Agent'))
+
     def process_response(self,request,response):
         print('处理了响应')
         return response

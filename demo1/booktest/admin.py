@@ -6,7 +6,6 @@ class HeroInfolines(admin.StackedInline):
     extra = 1 #extra额外的（有几个默认字段）
 
 class BookInfoAdmin(admin.ModelAdmin):
-
     list_display = ('title','pub_date')#重写(系统类ModelAdmin中的)list_display
     list_filter = ('title','pub_date')#增加过滤器 (后面可以增加)
     # list_per_page = 1 #分页，一页显示一本

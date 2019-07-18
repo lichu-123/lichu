@@ -2396,7 +2396,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
                 'extends false final finally flash_proxy for get if implements import in include Infinity ' +
                 'instanceof int internal is isFinite isNaN isXMLName label namespace NaN native new null ' +
                 'Null Number Object object_proxy override parseFloat parseInt private protected public ' +
-                'return set static String super switch this throw true try typeof uint undefined unescape ' +
+                'return set assets String super switch this throw true try typeof uint undefined unescape ' +
                 'use void while with'
             ;
 
@@ -2650,7 +2650,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'else enum explicit extern if for friend goto inline ' +
 						'mutable naked namespace new noinline noreturn nothrow ' +
 						'register reinterpret_cast return selectany ' +
-						'sizeof static static_cast struct switch template this ' +
+						'sizeof assets static_cast struct switch template this ' +
 						'thread throw true false try typedef typeid typename union ' +
 						'using uuid virtual void volatile whcar_t while';
 					
@@ -2703,7 +2703,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'extern false finally fixed float for foreach get goto if implicit in int ' +
 						'interface internal is lock long namespace new null object operator out ' +
 						'override params private protected public readonly ref return sbyte sealed set ' +
-						'short sizeof stackalloc static string struct switch this throw true try ' +
+						'short sizeof stackalloc assets string struct switch this throw true try ' +
 						'typeof uint ulong unchecked unsafe ushort using virtual void while var ' +
 						'from group by into select let where orderby join on equals ascending descending';
 
@@ -2782,7 +2782,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'navy ne-resize no-close-quote none no-open-quote no-repeat normal nowrap n-resize nw-resize oblique olive once open-quote outset '+
 						'outside overline pointer portrait pre print projection purple red relative repeat repeat-x repeat-y rgb ridge right right-side '+
 						'rightwards rtl run-in screen scroll semi-condensed semi-expanded separate se-resize show silent silver slower slow '+
-						'small small-caps small-caption smaller soft solid speech spell-out square s-resize static status-bar sub super sw-resize '+
+						'small small-caps small-caption smaller soft solid speech spell-out square s-resize assets status-bar sub super sw-resize '+
 						'table-caption table-cell table-column table-column-group table-footer-group table-header-group table-row table-row-group teal '+
 						'text-bottom text-top thick thin top transparent tty tv ultra-condensed ultra-expanded underline upper-alpha uppercase upper-latin '+
 						'upper-roman url visible wait white wider w-resize x-fast x-high x-large x-loud x-low x-slow x-small x-soft xx-large xx-small yellow';
@@ -2927,7 +2927,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 
 		var keywords =	'as assert break case catch class continue def default do else extends finally ' +
 						'if in implements import instanceof interface new package property return switch ' +
-						'throw throws try while public protected private static';
+						'throw throws try while public protected private assets';
 		var types    =  'void boolean byte char short int long float double';
 		var constants = 'null';
 		var methods   = 'allProperties count get size '+
@@ -2978,7 +2978,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'false final finally float for goto if implements import ' +
 						'instanceof int interface long native new null ' +
 						'package private protected public return ' +
-						'short static strictfp super switch synchronized this throw throws true ' +
+						'short assets strictfp super switch synchronized this throw throws true ' +
 						'transient try void volatile while';
 
 		this.regexList = [
@@ -3026,7 +3026,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						+ 'lazy mixin mod nativearray new not null on or override package postinit '
 						+ 'protected public public-init public-read replace return reverse sizeof '
 						+ 'step super then this throw true try tween typeof var where while with '
-						+ 'attribute let private readonly static trigger'
+						+ 'attribute let private readonly assets trigger'
 						;
 
 		this.regexList = [
@@ -3207,7 +3207,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 		var keywords =	'abstract and array as break case catch cfunction class clone const continue declare default die do ' +
 						'else elseif enddeclare endfor endforeach endif endswitch endwhile extends final for foreach ' +
 						'function global goto if implements include include_once interface instanceof insteadof namespace new ' +
-						'old_function or private protected public return require require_once static switch ' +
+						'old_function or private protected public return require require_once assets switch ' +
 						'trait throw try use var while xor ';
 		
 		var constants	= '__FILE__ __LINE__ __METHOD__ __FUNCTION__ __CLASS__';
@@ -3439,7 +3439,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'navy ne-resize no-close-quote none no-open-quote no-repeat normal nowrap n-resize nw-resize oblique olive once open-quote outset '+
 						'outside overline pointer portrait pre print projection purple red relative repeat repeat-x repeat-y rgb ridge right right-side '+
 						'rightwards rtl run-in screen scroll semi-condensed semi-expanded separate se-resize show silent silver slower slow '+
-						'small small-caps small-caption smaller soft solid speech spell-out square s-resize static status-bar sub super sw-resize '+
+						'small small-caps small-caption smaller soft solid speech spell-out square s-resize assets status-bar sub super sw-resize '+
 						'table-caption table-cell table-column table-column-group table-footer-group table-header-group table-row table-row-group teal '+
 						'text-bottom text-top thick thin top transparent tty tv ultra-condensed ultra-expanded underline upper-alpha uppercase upper-latin '+
 						'upper-roman url visible wait white wider w-resize x-fast x-high x-large x-loud x-low x-slow x-small x-soft xx-large xx-small yellow';
@@ -3534,7 +3534,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'open option order out output partial password precision prepare primary ' +
 						'prior privileges procedure public read real references relative repeatable ' +
 						'restrict return returns revoke rollback rollup rows rule schema scroll ' +
-						'second section select sequence serializable set size smallint static ' +
+						'second section select sequence serializable set size smallint assets ' +
 						'statistics table temp temporary then time timestamp to top transaction ' +
 						'translation trigger true truncate uncommitted union unique update values ' +
 						'varchar varying view when where with work';

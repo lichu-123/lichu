@@ -181,8 +181,8 @@ div.edui-box {
 
 .edui-default .edui-editor-iframeholder {
     position: relative;
-    /*for fix ie6 toolbarmsg under iframe bug. relative -> static */
-    /*_position: static !important;*
+    /*for fix ie6 toolbarmsg under iframe bug. relative -> assets */
+    /*_position: assets !important;*
 }
 
 .edui-default .edui-editor-iframeholder textarea {

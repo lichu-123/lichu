@@ -8,6 +8,8 @@
 <!--搜索结果展示页面-->
 <h2>当前搜索内容为{{ query }}</h2>
 <h3>搜索结果</h3>
+
+{{ page.object_list }}
 {% for i in page.object_list %}
     {{ i.object.title }}
 {% endfor %}

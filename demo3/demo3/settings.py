@@ -29,7 +29,7 @@ SECRET_KEY = 'h4@q^a$so04$t+!e%1de=utrx@wn(t!bp^1p4@@&e6ht=ueplt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -128,9 +128,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/assets/'
 #配置static
-STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
+STATICFILES_DIRS=(os.path.join(BASE_DIR,'assets'),)
 #配置media的绝对路径
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sadia',
+    'haystack',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,23 @@ STATICFILES_DIRS=(os.path.join(BASE_DIR,'assets'),)
 #配置上传文件路径media
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
+HAYSTACK_CONNECTIONS = {
+    'default': {
+    'ENGINE': 'sadia.whoosh_cn_backend.WhooshEngine',
+    'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+    }
+}
+
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
+
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+#Django发送邮件配置相关参数
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True #是否使用TLS安全传输协议(用于在两个通信应用程序之间提供保密性和数据完整性。)
+EMAIL_USE_SSL = False #是否使用SSL加密，qq企业邮箱要求使用  note:这两个只能有一个为True
+EMAIL_HOST = 'smtp.163.com' #发送邮件的邮箱 的 SMTP服务器，这里用了163邮箱 （每一个邮箱的运营商服务器地址都不一样，可以自己百度一个）
+EMAIL_PORT = 25 #发件箱的SMTP服务器端口
+EMAIL_HOST_USER = 'b1278822679@163.com' #发送邮件的邮箱地址
+EMAIL_HOST_PASSWORD = 'a1278822679' #邮箱的密码 (note：163邮箱默认客户端授权是关闭的，要在设置中开启，这个是授权码)
+DEFAULT_FROM_EMAIL = 'lc0371 <b1278822679@163.com>' #默认显示的谁发的邮件(格式不能乱写，内容可以自己设置)

@@ -20,6 +20,7 @@ from django.views.static import serve
 from .settings import MEDIA_ROOT
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('sadia/',include('sadia.urls',namespace='sadia')),
+    url('',include('sadia.urls',namespace='sadia')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+    url('search/', include('haystack.urls')),
 ]

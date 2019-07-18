@@ -122,13 +122,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_PATH = os.path.join(os.path.join(BASE_DIR,'static'))
+STATIC_PATH = os.path.join(os.path.join(BASE_DIR,'assets'))
 STATICFILES_DIRS = (
     STATIC_PATH,
 )
-STATIC_URL = '/static/'
+STATIC_URL = '/assets/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'static/media')
+MEDIA_ROOT = os.path.join(BASE_DIR,'assets/media')
 
 #使用redis存储session 如果不想使用redis存储可以注释掉这些配置。  note：（一些大型的项目一般都是用redis存储的）
 SESSION_ENGINE = 'redis_sessions.session' #指定session的存储方式为redis存储

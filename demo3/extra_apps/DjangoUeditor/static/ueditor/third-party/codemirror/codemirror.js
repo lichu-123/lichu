@@ -82,7 +82,7 @@ var CodeMirror = (function() {
         // marked.
         var bracketHighlighted;
         // Tracks the maximum line length so that the horizontal scrollbar
-        // can be kept static when scrolling.
+        // can be kept assets when scrolling.
         var maxLine = "", maxWidth, tabText = computeTabText();
 
         // Initialize the content.
