@@ -170,7 +170,7 @@
                                         <!-- Mainmenu Start -->
                                         <ul class="mainmenu sadia-main-menu">
                                             <li class="sadia-mainmenu-itm menu-item-has-children">
-                                                <a href="index.html" class="sadia-mainmenu-link">Home</a>
+                                                <a href="{% url 'sadia:index' %}" class="sadia-mainmenu-link">Home</a>
                                                 <ul class="sub-menu">
                                                     <li>
                                                         <a href="index.html" class="mainmenu-sub-link">Home version 1</a>
@@ -184,7 +184,7 @@
                                                 </ul>
                                             </li>
                                             <li class="sadia-mainmenu-itm menu-item-has-children">
-                                                <a href="shop.html" class="sadia-mainmenu-link">Categories</a>
+                                                <a href="{% url 'sadia:shop' %}" class="sadia-mainmenu-link">Categories</a>
                                                 <ul class="megamenu three-column">
                                                     <li>
                                                         <a href="#">Fashion</a>
@@ -244,7 +244,7 @@
                                                 </ul>
                                             </li>
                                             <li class="sadia-mainmenu-itm menu-item-has-children">
-                                                <a href="shop.html" class="sadia-mainmenu-link">Shop</a>
+                                                <a href="{% url 'sadia:shop' %}" class="sadia-mainmenu-link">SHOP</a>
                                                 <ul class="sub-menu">
                                                     <li class="menu-item-has-children">
                                                         <a href="shop.html">Shop Grid</a>
@@ -588,14 +588,22 @@
                                         </ul>
                                     </div>
                                     <div class="sadia-short">
-                                        <label>Short By:</label>
+                                        <label>价格:</label>
+                                        {% comment %}
                                         <select class="short-select">
-                                            <option value="1">Position</option>
-                                            <option value="2">Name, A to Z</option>
-                                            <option value="3">Name, Z to A</option>
-                                            <option value="4">Price, low to high</option>
-                                            <option value="5">Price, high to low</option>
+                                             <option value="1">Position</option>
+                                             <option value="2">Name, A to Z</option>
+                                             <option value="3">Name, Z to A</option>
+                                            <option value="1" >Price, low to high</option>
+                                            <option value="2" >Price, high to low</option>
                                         </select>
+                                        {% endcomment %}
+                                        <input type="button" id="lth" value="价格从低到高">
+                                        <input type="button" id="htl" value="价格从高到低">
+
+
+
+
                                     </div>
                                 </div>
                                 <!-- Shop Layout Start -->
@@ -1289,7 +1297,7 @@
     </div>
 
 
-
+    <div id="arg_paglist" hidden>{{ page.object_list }}</div>
     <!-- ************************* JS ************************* -->
 
     <!-- jQuery JS -->
@@ -1306,5 +1314,37 @@
 
     <!-- Main JS -->
     <script src="/assets/js/main.js"></script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+<script>
+    $(function () {
+
+        $('#lth').click(function () {
+            // console.log('==========')
+            // var list_obj=[]
+            // var list_price=[]
+            // {% for o in page.object_list %}
+            //     console.log({{ o.price }})
+            // {% endfor %}
+            // pag_list=$('#arg_paglist').text()
+            // console.log(pag_list)
+            // list=eval(pag_list)
+            // console.log(list)
+            // console.log(typeof(list))
+            for( var o in pag_list){
+                // console.log(o)
+                // console.log(typeof(o))
+            }
+
+            // $.ajax(function () {
+            //     '{{ page }}'
+            //
+            //
+            // })
+        })
+        $('#htl').click(function () {
+            console.log('+++++++++++')
+        })
+    })
+</script>
 </body>
 </html>
